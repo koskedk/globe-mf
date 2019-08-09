@@ -1,10 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="05c1e54b-c9b0-494f-b4f1-6bfb095e6963" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/css/layout-dark-blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/css/layout-dark-blue.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/css/layout-dark-blue.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/MaterialIcons-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/MaterialIcons-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/MaterialIcons-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/MaterialIcons-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-300.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-300.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-300.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-300.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-300.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-700.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-700.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-700.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-700.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-700.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/fonts/roboto-v15-latin-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/401.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dark-user-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dark-user-bg2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dashboard/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dashboard/md.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dashboard/progress.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dashboard/sales.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dashboard/sidebar-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/dashboard/views.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/error.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/landing/landing-header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/landing/promotion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/login/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/login/login2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/logo-ultima.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/logo2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/preloader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/profile-bg-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/profile-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/profile-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/user-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/layout/images/user-bg2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pages/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pages/access.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pages/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pages/landing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pages/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pages/primeflex.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pages/primereact.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/_layout_styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/_theme_styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_dashboard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_exception.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_landing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_login.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_splash.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_utils.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/layout/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_common.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_data.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_message.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_misc.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_overlay.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_panel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sass/theme/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/theme/theme-dark-blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/theme/theme-dark-blue.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/theme/theme-dark-blue.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppFooter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1PC5Il0WIXaPzVw9KAu81wVWrsW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05c1e54b-c9b0-494f-b4f1-6bfb095e6963" name="Default Changelist" comment="" />
+      <created>1565365159593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565365159593</updated>
+      <workItem from="1565365160978" duration="3041000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
