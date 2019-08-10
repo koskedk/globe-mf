@@ -10,13 +10,18 @@ interface State {
 }
 
 export class AppInlineProfile extends Component<Props, State> {
-
+    private style1: any;
 
     constructor(props: Readonly<Props>) {
         super(props);
         this.state = {
             expanded: false
         };
+
+        this.style1 = {
+            height: '0px',
+            'padding-top':'-5'
+        }
     }
 
     onClick = (event: any) => {
@@ -28,15 +33,15 @@ export class AppInlineProfile extends Component<Props, State> {
 
         return (
             <div>
-                <div className={classNames('profile', {'profile-expanded': this.state.expanded})}>
-                    <a onClick={this.onClick}>
+                <div className={classNames('profile', {'profile-expanded': this.state.expanded})} style={this.style1}>
+                    {/*  <a onClick={this.onClick}>
                         <img className="profile-image" src="assets/layout/images/avatar.png" alt="Profile"/>
                         <span className="profile-name">Jane Williams</span>
                         <i className="material-icons">keyboard_arrow_down</i>
-                    </a>
+                    </a>*/}
                 </div>
 
-                <ul className="ultima-menu profile-menu">
+                {/* <ul className="ultima-menu profile-menu">
                     <li role="menuitem">
                         <a  className="ripplelink" tabIndex={this.state.expanded ? 0 : -1}>
                             <i className="material-icons">person</i>
@@ -61,7 +66,7 @@ export class AppInlineProfile extends Component<Props, State> {
                             <span>Logout</span>
                         </a>
                     </li>
-                </ul>
+                </ul>*/}
             </div>
         );
     }

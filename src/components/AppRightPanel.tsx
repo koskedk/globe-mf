@@ -35,38 +35,38 @@ export class AppRightPanel extends Component<Props, State> {
 
                             <div className="weather-today">
                                 <span className="weather-today-value">21&#8451;</span>
-                                <img src="assets/layout/images/dashboard/weather-icon-2.svg" width="60" alt="weather2"/>
+                               {/* <img src="assets/layout/images/dashboard/weather-icon-2.svg" width="60" alt="weather2"/>*/}
                             </div>
 
                             <ul className="weekly-weather">
                                 <li>
                                     Thursday
-                                    <img src="assets/layout/images/dashboard/weather-icon-1.svg" alt="weather1"/>
+                                    {/*<img src="assets/layout/images/dashboard/weather-icon-1.svg" alt="weather1"/>*/}
                                     <span className="weekly-weather-value">24</span>
                                 </li>
                                 <li>
                                     Friday
-                                    <img src="assets/layout/images/dashboard/weather-icon-3.svg" alt="weather3"/>
+                                   {/* <img src="assets/layout/images/dashboard/weather-icon-3.svg" alt="weather3"/>*/}
                                     <span className="weekly-weather-value">19</span>
                                 </li>
                                 <li>
                                     Saturday
-                                    <img src="assets/layout/images/dashboard/weather-icon-4.svg" alt="weather4"/>
+                                   {/* <img src="assets/layout/images/dashboard/weather-icon-4.svg" alt="weather4"/>*/}
                                     <span className="weekly-weather-value">15</span>
                                 </li>
                                 <li>
                                     Sunday
-                                    <img src="assets/layout/images/dashboard/weather-icon-1.svg" alt="weather1"/>
+                                   {/* <img src="assets/layout/images/dashboard/weather-icon-1.svg" alt="weather1"/>*/}
                                     <span className="weekly-weather-value">24</span>
                                 </li>
                                 <li>
                                     Monday
-                                    <img src="assets/layout/images/dashboard/weather-icon-2.svg" alt="weather2"/>
+                                    {/*<img src="assets/layout/images/dashboard/weather-icon-2.svg" alt="weather2"/>*/}
                                     <span className="weekly-weather-value">21</span>
                                 </li>
                                 <li>
                                     Tuesday
-                                    <img src="assets/layout/images/dashboard/weather-icon-3.svg" alt="weather3"/>
+                                    {/*<img src="assets/layout/images/dashboard/weather-icon-3.svg" alt="weather3"/>*/}
                                     <span className="weekly-weather-value">20</span>
                                 </li>
                             </ul>

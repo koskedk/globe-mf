@@ -7,7 +7,7 @@
 html {
     height: 100%;
 }
- 
+
 body {
     font-family: Roboto,"Helvetica Neue",sans-serif;
     font-size: $fontSize;
@@ -18,7 +18,7 @@ body {
     margin: 0;
     background-color: $bodyBgColor;
     height: 100%;
-    
+
     a {
         text-decoration: none;
     }
@@ -36,7 +36,7 @@ body {
 }
 
 .layout-container {
-    
+
     .topbar {
         position: fixed;
         z-index: 100;
@@ -44,7 +44,7 @@ body {
         height: 75px;
         background-color: $primaryColor;
         @include shadow(0 2px 5px 0 rgba(0,0,0,0.26));
-        
+
         .logo {
             display: inline-block;
             vertical-align: middle;
@@ -53,7 +53,7 @@ body {
             background: url("../images/logo2x.png") top left no-repeat;
             background-size: 200px 30px;
         }
-        
+
         .topbar-left {
             box-sizing: border-box;
             padding: 20px;
@@ -63,11 +63,11 @@ body {
             float: left;
             @include shadow(3px 0 6px rgba(0,0,0,0.3));
         }
-        
+
         .topbar-right {
             padding: 15px;
             position: relative;
-            
+
             #menu-button {
                 color: $accentTextColor;
                 display: inline-block;
@@ -79,22 +79,22 @@ body {
                 top: 3px;
                 background-color: $accentColor;
                 cursor: pointer;
-                
+
                 @include border-radius(50%);
                 @include transition(all $transitionDuration);
                 @include double-shadow(0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16));
-                
+
                 &:hover {
                     @include scale(1.2);
                 }
-                
+
                 i {
                     @include material-icon("chevron_left");
                     @include transition(all $transitionDuration);
                     font-size: 36px;
                 }
             }
-            
+
             #topbar-menu-button, #rightpanel-menu-button  {
                 display: none;
                 color: $topbarButtonColor;
@@ -105,28 +105,28 @@ body {
                 cursor: pointer;
 
                 @include transition(all $transitionDuration);
-                
+
                 i {
                     @include transition(color .5s);
                     font-size: 36px;
                 }
             }
-            
+
             #rightpanel-menu-button {
                 display: block;
-                
+
                 &:hover {
                     color: $topbarButtonHoverColor;
                 }
             }
-            
+
             .topbar-items {
                 li{
                     a {
                         cursor: pointer;
                     }
                 }
-                .search-item {                    
+                .search-item {
                     input {
                         position: relative;
                         top: -10px;
@@ -136,21 +136,21 @@ body {
                         border-width: 0;
                         padding: 2px;
                         color: $topbarSearchColor;
-                        
+
                         &:focus {
                             outline: 0 none;
                         }
                     }
-                    
+
                     input:focus ~ label {
                       top:-5px;
                       font-size:12px;
                     }
-                    
+
                     input.ui-state-filled ~ label {
                         display: none;
                     }
-                    
+
                     label {
                         color: $topbarSearchColor;
                         top: 8px;
@@ -159,7 +159,6 @@ body {
             }
         }
     }
-    
     .layout-menu {
         overflow: auto;
         position: fixed;
@@ -189,52 +188,51 @@ body {
                 padding-bottom: 120px;
             }
         }
-                
+
         .profile {
             box-sizing: border-box;
             padding-top: 2em;
             width: 250px;
             height: 145px;
             text-align: center;
-            background: url("../images/profile-bg.png") top left no-repeat;
             background-size: 250px 145px;
             @include shadow(0 2px 5px 0 rgba(0,0,0,0.16));
 
             a {
                 cursor: pointer;
             }
-            
+
             .profile-image {
                 width: 60px;
                 height: 60px;
                 margin: 0 auto 5px auto;
                 display: block;
             }
-            
+
             .profile-name {
                 display: inline-block;
                 color: $textColor;
                 vertical-align: middle;
                 font-size: 1em;
             }
-            
+
             i {
                 color: $textColor;
                 vertical-align: middle;
                 @include transition(transform $transitionDuration);
             }
-            
+
             &.profile-expanded {
                 i {
                     @include rotate(-180deg);
                 }
-                
+
                 + .profile-menu {
                     max-height: 500px;
-                }   
+                }
             }
         }
-        
+
         .profile-menu {
             max-height: 0;
             border-bottom: 1px solid $profileMenuBorderBottomColor;
@@ -247,7 +245,7 @@ body {
             -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
             -o-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
             transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-            
+
             li{
                 &:first-child {
                     margin-top: 1em;
@@ -260,22 +258,20 @@ body {
                 }
             }
         }
-                        
+
         &.layout-menu-dark {
             background-color: $darkMenuBgColor;
-            
+
             .profile {
-                background-image: url("../images/profile-bg-dark.png");
-            
                 .profile-name {
                     color: $darkMenuColor;
                 }
-                
+
                 i {
                     color: $darkMenuColor;
-                }    
+                }
             }
-            
+
             .profile-menu {
                 border-bottom: 1px solid $profileMenuDarkBorderBottomColor;
             }
@@ -288,46 +284,46 @@ body {
                     }
                 }
             }
-            
-            ul.ultima-menu {                
+
+            ul.ultima-menu {
                 li {
                     a {
                         color: $darkMenuColor;
-                        
+
                         i {
                             color: $darkMenuColor;
                         }
-                        
+
                         &:hover {
                             background-color: $darkMenuHoverColor;
                         }
 
                          &.active-menuitem-routerlink {
                             color: $darkMenuRouterLinkActiveColor;
-                            
+
                             i {
                                 color: $darkMenuRouterLinkActiveColor;
                             }
-                            
+
                             &:hover {
                                 color: $darkMenuColor;
-                                
+
                                 > i {
                                     color: $darkMenuColor;
                                 }
                             }
                          }
                     }
-                    
+
                     &.active-menuitem {
                         > a {
                             color: $accentTextColor;
                             background-color: $accentColor;
-                            
+
                             &.active-menuitem-routerlink {
                                 color: $accentTextColor;
                                 background-color: $accentColor;
-                                
+
                                 i {
                                     color: $textColor;
                                 }
@@ -335,9 +331,9 @@ body {
                         }
                     }
                 }
-            }                    
+            }
         }
-        
+
         .menuitem-badge {
             position: absolute;
             right: 3em;
@@ -354,7 +350,7 @@ body {
             line-height: 1em;
             @include border-radius(50%);
         }
-        
+
         .layout-menu-tooltip {
             display:none;
             padding: 0 5px;
@@ -363,7 +359,7 @@ body {
             top: 6px;
             z-index: 101;
             line-height: 1;
-            
+
             .layout-menu-tooltip-text {
                padding: 6px 8px;
                font-weight: 700;
@@ -375,7 +371,7 @@ body {
                @include border-radius($borderRadius);
                @include shadow(0 6px 12px rgba(0,0,0,.175));
             }
-            
+
             .layout-menu-tooltip-arrow {
                 position: absolute;
                 width: 0;
@@ -390,40 +386,40 @@ body {
             }
         }
     }
-        
+
     &.menu-layout-overlay {
         .layout-menu {
             margin-left: -250px;
         }
-        
+
         .layout-main {
             margin-left: 0px;
         }
-        
+
         &.layout-menu-overlay-active {
             .layout-menu {
                 z-index: 999999999;
                 margin-left: 0px;
             }
-            
+
             .layout-mask {
                 display: block;
             }
-            
-            .topbar {                
-                .topbar-right {                
+
+            .topbar {
+                .topbar-right {
                     #menu-button {
                         i {
                             @include rotate(0deg);
                         }
                     }
                 }
-            } 
-        }  
-        
+            }
+        }
+
         .topbar {
             z-index: 999999998;
-            
+
             .topbar-right {
                 #menu-button {
                     i {
@@ -432,8 +428,8 @@ body {
                     }
                 }
             }
-            
-        }      
+
+        }
     }
 
     .layout-main {
@@ -503,11 +499,11 @@ body {
             }
         }
     }
-    
+
     .layout-mask {
         display: none;
     }
-    
+
     .ultima-menu {
         margin: 0;
         padding: 0;
@@ -516,7 +512,7 @@ body {
         &.ultima-main-menu {
             margin-top: 16px;
         }
-        
+
         li {
             a {
                 font-size: 1em;
@@ -528,18 +524,18 @@ body {
                 @include transition(background-color $transitionDuration);
                 overflow: hidden;
                 cursor: pointer;
-                
+
                 i {
                     color: $layoutMenuItemIconColor;
                 }
-                
+
                 i:first-child {
                     display: inline-block;
                     vertical-align: middle;
                     margin-right: .5em;
                     font-size: 1.5em;
                 }
-                
+
                 i:last-child {
                     float: right;
                     font-size: $fontSize + 4;
@@ -547,11 +543,11 @@ body {
                     margin-right: -.15em;
                     @include transition(transform $transitionDuration);
                 }
-                
+
                 &:hover {
                     background-color: $hoverBgColor;
                 }
-                
+
                 span {
                     display: inline-block;
                     vertical-align: middle;
@@ -559,35 +555,35 @@ body {
 
                 &.active-menuitem-routerlink {
                     color: $lightMenuRouterLinkActiveColor;
-                    
+
                     > i {
                         color: $lightMenuRouterLinkActiveColor;
                     }
-                    
+
                     &:hover {
                         color: $textColor;
-                        
+
                         > i {
                             color: $layoutMenuItemIconColor;
                         }
                     }
                 }
             }
-            
+
             &.active-menuitem {
                 > a {
                     color: $primaryColor;
                     background-color: $layoutMenuItemActiveColor;
-                    
+
                     i {
                         color: $primaryColor;
                     }
-                    
+
                     i:last-child {
                         @include rotate(-180deg);
                     }
                 }
-                
+
                 > ul {
                     max-height: 500px;
                 }
@@ -606,16 +602,16 @@ body {
                 -moz-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
                 -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
                 -o-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-                transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);  
-                
+                transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+
                 li {
                     a {
                         padding: .5em 2em .5em 2em;
-                        
+
                         > span {
                             font-size: $fontSize - 1;
                         }
-                        
+
                         i:first-child {
                             display: inline-block;
                             vertical-align: middle;
@@ -623,28 +619,28 @@ body {
                             font-size: 1.250em;
                         }
                     }
-                    
+
                     ul {
                         li {
                             a {
                                 padding-left: 3em;
                             }
                         }
-                        
+
                         ul {
                             li {
                                 a {
                                     padding-left: 4em;
                                 }
                             }
-                            
+
                             ul {
                                 li {
                                     a {
                                         padding-left: 5em;
                                     }
                                 }
-                                
+
                                 ul {
                                     li {
                                         a {
@@ -657,7 +653,7 @@ body {
                     }
                 }
             }
-            
+
             &.red-badge {
                 > a {
                     .menuitem-badge {
@@ -666,7 +662,7 @@ body {
                     }
                 }
             }
-            
+
             &.purple-badge {
                 > a {
                     .menuitem-badge {
@@ -675,7 +671,7 @@ body {
                     }
                 }
             }
-            
+
             &.teal-badge {
                 > a {
                     .menuitem-badge {
@@ -686,24 +682,24 @@ body {
             }
         }
     }
-    
+
     .footer {
-        
+
         .footer-text-left {
             float: left;
         }
-        
+
         .footer-text-right {
             color: $textSecondaryColor;
             float: right;
-            
+
             span {
                 vertical-align: middle;
                 display: inline-block;
             }
         }
     }
-    
+
     .layout-rightpanel {
         position: fixed;
         top: 75px;
@@ -747,28 +743,28 @@ body {
 }
 
 @media (min-width: 1025px) {
-    
+
     .layout-container {
-        
+
         .topbar-items {
             float: right;
             margin: 0;
             padding: 5px 0 0 0;
             list-style-type: none;
-            
+
             > li {
                 float: right;
                 position: relative;
                 margin-left: 8px;
-                
+
                 > a {
                     position: relative;
                     display: block;
-                    
+
                     .topbar-item-name {
                         display: none;
                     }
-                    
+
                     .topbar-badge {
                         position: absolute;
                         right: -5px;
@@ -787,19 +783,19 @@ body {
                     font-size: 36px;
                     color: #ffffff;
                     @include transition(color $transitionDuration);
-                    
+
                     &:hover {
                         color: #e8e8e8;
                     }
                 }
-                
+
                 &.profile-item {
                     .profile-image {
                         width: 36px;
                         height: 36px;
                     }
                 }
-                
+
                 > ul {
                     position: absolute;
                     top: 55px;
@@ -812,13 +808,13 @@ body {
                     -moz-animation-duration: .5s;
                     animation-duration: .5s;
                 }
-                
+
                 &.active-top-menu {
                     > ul {
                         display: block;
                     }
                 }
-                
+
                 .topbar-message {
                     img {
                         display: inline-block;
@@ -828,58 +824,58 @@ body {
                 }
             }
         }
-        
+
         &.menu-layout-static {
             .layout-menu {
                 margin-left: 0;
             }
-            
+
             .layout-main {
                 margin-left: 250px;
             }
-            
+
             &.layout-menu-static-inactive {
                 .topbar {
-                    .topbar-right {                
-                        #menu-button {                            
+                    .topbar-right {
+                        #menu-button {
                             i {
                                 @include rotate(180deg);
                             }
                         }
                     }
                 }
-                
+
                 .layout-menu {
                     margin-left: -250px;
                 }
-                
+
                 .layout-main {
                     margin-left: 0px;
                 }
             }
-            
+
             .layout-mask {
                 display: none;
             }
         }
-        
+
         &.menu-layout-horizontal {
             .topbar {
                 @include no-shadow();
-                
+
                 .topbar-left {
                     background-color: $primaryColor;
                     @include no-shadow();
                 }
-                
+
                 .topbar-right {
                     #menu-button {
                         display: none;
                     }
                 }
             }
-            
-            .layout-menu {            
+
+            .layout-menu {
                 overflow: visible;
                 position: fixed;
                 width: 100%;
@@ -903,50 +899,50 @@ body {
                         padding-bottom: 0;
                     }
                 }
-                
+
                 ul.ultima-menu {
 
                     &.ultima-main-menu {
                         margin-top: 0;
                     }
-                    
+
                     > li {
                         float: left;
                         position: relative;
-                        
+
                         > a {
                             color: #ffffff;
-                            
+
                             i {
                                 color: #ffffff;
                             }
-                            
+
                             &:hover {
                                 background-color: #e8e8e8;
                                 color: $textColor;
-                                
+
                                 i {
                                     color: $textColor;
                                 }
                             }
-                            
+
                             &.active-menuitem-routerlink {
                                 color: $horizontalLightMenuRouterLinkActiveColor;
-                                
+
                                 > i {
                                     color: $horizontalLightMenuRouterLinkActiveColor;
                                 }
-                                
+
                                 &:hover {
                                     color: $textColor;
-                                    
+
                                     i {
                                         color: $textColor;
                                     }
                                 }
                             }
                         }
-                        
+
                         > ul {
                             z-index: 100;
                             position: absolute;
@@ -957,42 +953,42 @@ body {
                             height: 0;
                             @include transition(none);
                             @include double-shadow(0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2));
-                            
+
                             li {
                                 a {
                                     padding: 10px 16px;
                                 }
-                                
+
                                 ul {
                                     position: static;
-                                    
+
                                     li {
                                         a {
                                             padding-left: 32px;
                                         }
                                     }
-                                    
+
                                     ul {
                                         li {
                                             a {
                                                 padding-left: 48px;
                                             }
                                         }
-                                        
+
                                         ul {
                                             li {
                                                 a {
                                                     padding-left: 64px;
                                                 }
                                             }
-                                            
+
                                             ul {
                                                 li {
                                                     a {
                                                         padding-left: 80px;
                                                     }
                                                 }
-                                                
+
                                                 ul {
                                                     li {
                                                         a {
@@ -1004,7 +1000,7 @@ body {
                                         }
                                     }
                                 }
-                                
+
                                 &.active-menuitem {
                                     > a {
                                         color: $primaryColor;
@@ -1017,12 +1013,12 @@ body {
                                 }
                             }
                         }
-                        
+
                         &.active-menuitem {
                             > a {
                                 color: $accentTextColor;
                                 background-color: $accentColor;
-                                
+
                                 i {
                                     color: $accentTextColor;
                                 }
@@ -1034,60 +1030,60 @@ body {
                         }
                     }
                 }
-                
+
                 &.layout-menu-dark {
                     background-color: $darkMenuBgColor;
-                                        
-                    ul.ultima-menu {            
+
+                    ul.ultima-menu {
                         li {
                             a {
                                 color: #ffffff;
-                                
+
                                 &:hover {
                                     background-color: $darkMenuHoverColor;
                                     color: #ffffff;
-                                    
+
                                     i {
                                         color: #ffffff;
                                     }
                                 }
-                                
+
                                 &.active-menuitem-routerlink {
                                    color: $darkMenuRouterLinkActiveColor;
-                                   
+
                                    i {
                                        color: $darkMenuRouterLinkActiveColor;
                                    }
-                                   
+
                                    &:hover {
                                        color: #ffffff;
-                                       
+
                                        i {
                                            color: #ffffff;
                                        }
                                    }
                                 }
                             }
-                            
+
                             &.active-menuitem {
                                 > a {
                                     color: $accentTextColor;
                                     background-color: $accentColor;
                                 }
                             }
-                            
+
                             ul {
                                 background-color: $darkMenuBgColor;
                             }
                         }
-                    }                    
+                    }
                 }
-                
+
                 .menuitem-badge {
                     left: 2em;
                     top: .5em;
                 }
-                
+
                 .active-menuitem {
                     .menuitem-badge {
                         background-color: $activeMenuItemBadgeColor;
@@ -1095,30 +1091,30 @@ body {
                     }
                 }
             }
-            
+
             .layout-main {
                 padding-top: 110px;
                 margin-left: 0px;
             }
-            
+
             .layout-mask {
                 display: none;
             }
         }
-        
-        
+
+
         &.menu-layout-slim {
             .topbar {
                 left: 75px;
                 width: calc(100% - 75px);
-                
+
                 .topbar-left {
                     background: transparent;
                     @include no-shadow();
                 }
-                
+
                 .topbar-right {
-                    #menu-button { 
+                    #menu-button {
                         display: none;
                     }
                 }
@@ -1148,51 +1144,51 @@ body {
                         width: 100%;
                     }
                 }
-                
+
                 .profile {
                     width: 100%;
                     height: 74px;
                     padding-top: 15px;
-                    
+
                     > a {
                         .profile-image {
                             width: 45px;
                             height: 45px;
                         }
-                        
+
                         .profile-name, i {
                             display: none;
                         }
                     }
                 }
-                
+
                 .ultima-menu {
                     padding: 0;
-                    
+
                     > li {
                         position: relative;
-                        
+
                         > a {
                             text-align: center;
                             padding-left: 0;
                             padding-right: 0;
                             padding-top: .5em;
                             padding-bottom: .5em;
-                            
+
                             i:first-child {
                                 font-size: 1.75em;
                                 margin-right: 0;
                             }
-                            
+
                             span, .submenu-icon {
                                 display: none;
                             }
-                            
+
                             &:hover + .layout-menu-tooltip {
                                 display: block;
                             }
                         }
-                        
+
                         > ul {
                             background-color: #ffffff;
                             position: absolute;
@@ -1202,40 +1198,40 @@ body {
                             height: 0;
                             @include transition(none);
                             @include shadow(0 2px 5px 0 rgba(0,0,0,0.26));
-                            
+
                             li {
                                 a {
                                     padding-left: 16px;
                                 }
-                                
+
                                 ul {
                                     li {
                                         a {
                                             padding-left: 32px;
                                         }
                                     }
-                                    
+
                                     ul {
                                         li {
                                             a {
                                                 padding-left: 48px;
                                             }
                                         }
-                                        
+
                                         ul {
                                             li {
                                                 a {
                                                     padding-left: 64px;
                                                 }
                                             }
-                                            
+
                                             ul {
                                                 li {
                                                     a {
                                                         padding: 80px;
                                                     }
                                                 }
-                                                
+
                                                 ul {
                                                     li {
                                                         a {
@@ -1249,21 +1245,21 @@ body {
                                 }
                             }
                         }
-                        
+
                         &.active-menuitem {
                             > a {
                                 &:hover + .layout-menu-tooltip {
                                     display: none;
                                 }
                             }
-                            
+
                             > ul {
                                 height: auto;
                             }
                         }
                     }
                 }
-                
+
                 &.layout-menu-dark {
                     .ultima-menu {
                         > li {
@@ -1274,11 +1270,11 @@ body {
                     }
                 }
             }
-            
+
             .layout-main {
                 margin-left: 75px;
             }
-            
+
             .layout-footer {
                 margin-left: 75px;
             }
@@ -1288,7 +1284,7 @@ body {
 
 @media (max-width: 1024px) {
     .layout-container {
-        
+
         &.menu-layout-static {
             .topbar {
                 .topbar-right {
@@ -1302,33 +1298,33 @@ body {
             .layout-menu {
                 margin-left: -265px;
             }
-            
+
             .layout-main {
                 margin-left: 0px;
             }
-            
+
             &.layout-menu-static-active {
                 .layout-menu {
                     margin-left: 0;
                     z-index: 999999999;
                 }
-                
+
                 .topbar {
                     z-index: 999999998;
-                    
+
                     .topbar-right {
-                        #menu-button {                            
+                        #menu-button {
                             i {
                                 @include rotate(0);
                             }
                         }
                     }
                 }
-                
+
                 .layout-main {
                     margin-left: 0;
                 }
-                
+
                 .layout-mask {
                     display: block;
                 }
@@ -1340,7 +1336,7 @@ body {
                 #topbar-menu-button {
                     display: block;
                 }
-                
+
                 .topbar-items {
                     position: absolute;
                     top: 75px;
@@ -1355,7 +1351,7 @@ body {
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
-                    
+
                     > li {
                         > a {
                             width: 100%;
@@ -1365,23 +1361,23 @@ body {
                             padding: 16px 16px;
                             color: $textColor;
                             position: relative;
-                            
+
                             i {
                                 display: inline-block;
                                 vertical-align: middle;
                                 margin-right: 12px;
                                 font-size: 24px;
                             }
-                            
+
                             &:hover {
                                 background-color: #e8e8e8;
                             }
-                            
+
                             .topbar-item-name {
                                 display: inline-block;
                                 vertical-align: middle;
                             }
-                                            
+
                             .topbar-badge {
                                 position: absolute;
                                 left: 30px;
@@ -1395,10 +1391,10 @@ body {
                                 line-height: 12px;
                             }
                         }
-                        
+
                         > ul {
                             display: none;
-                            
+
                             li {
                                 a {
                                     span, img, i {
@@ -1408,15 +1404,15 @@ body {
                                 }
                             }
                         }
-                        
+
                         &.active-top-menu {
                             > a {
                                 color: $primaryColor;
                             }
-                            
+
                             > ul {
                                 display: block;
-                                
+
                                 li {
                                     a {
                                         padding-left: 32px;
@@ -1430,7 +1426,7 @@ body {
                                 background-image: linear-gradient(to bottom, $primaryColor, $primaryColor), linear-gradient(to bottom, desaturate(lighten($primaryColor,25%), 25%), desaturate(lighten($primaryColor,25%), 25%));
                             }
                         }
-                        
+
                         &.search-item {
                             text-align: center;
                             width: 100%;
@@ -1439,7 +1435,7 @@ body {
                             font-size: 16px;
                             padding: 16px 16px;
                             position: relative;
-                            
+
                             input {
                                 top: 0;
                                 width: 100%;
@@ -1447,48 +1443,48 @@ body {
                                 padding-right:16px;
                                 border-color: $dividerColor;
                                 color: $textColor;
-                                
+
                                 &:focus {
                                     border-color: $dividerColor;
                                 }
                             }
-                            
+
                             input:focus ~ label,
                             input.ui-state-filled ~ label  {
                                 top: -20px;
                                 color: $primaryColor;
                             }
-                            
+
                             label {
                                 top: 1px;
                                 color: $textColor;
                             }
-                            
+
                             i {
                                 position: absolute;;
                                 right: 5px;
                                 top: -2px;
                             }
                         }
-                        
+
                         &.profile-item {
                             .profile-image {
                                 display: inline-block;
                                 vertical-align: middle;
                                 width: 24px;
                                 height: 24px;
-                                background: url("../images/avatar.png") top left no-repeat;
+
                                 background-size: 24px 24px;
                                 margin-right: 14px;
                             }
-                            
+
                             span {
                                 vertical-align: middle;
                                 display: inline-block;
                             }
                         }
                     }
-                    
+
                     &.topbar-items-visible {
                         display: block;
                     }
@@ -1508,7 +1504,7 @@ body {
                     position: absolute;
                     top: 15px;
                 }
-                
+
                 #rightpanel-menu-button {
                     position: absolute;
                     right: 5px;
