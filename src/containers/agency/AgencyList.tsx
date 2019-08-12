@@ -4,8 +4,9 @@ import {AgencyHome} from "./AgencyHome";
 import {Agency} from "../../models/agency";
 
 interface Props {
-    name: string
-    id:string
+    agencies: Agency[]
+    onEdit: any,
+    onDelete: any
 }
 
 interface State {
@@ -13,12 +14,28 @@ interface State {
 
 export class AgencyList extends Component<Props, State> {
 
-    render() {
-        return (
-            <div>
-                {this.props.name} | {this.props.id}
-            </div>
+    edit = (event: any, data: any) => {
+        event.preventDefault();
+        this.props.onEdit(data);
+    }
 
+    delete = (event: any, data: any) => {
+        event.preventDefault();
+        this.props.onDelete(data);
+    }
+
+    render() {
+        const agencyList = this.props.agencies.map(a =>
+            <li key={a.id}>{a.name}|{a.id}
+                <button onClick={(event) => this.edit(event, a)}>./</button>
+                <button onClick={(event) => this.delete(event, a)}>X</button>
+            </li>
+        );
+
+        return (
+            <ul>
+                {agencyList}
+            </ul>
         );
     }
 }
