@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import * as uuid from "uuid";
 import {Agency} from "../../models/agency";
+import {Button} from "primereact/button";
+import {InputText} from "primereact/inputtext";
 
 interface Props {
     onFormSubmitted: any;
@@ -34,19 +36,21 @@ export class AgencyForm extends Component<Props, State> {
                 {this.state ?
                     <form onSubmit={this.handleSubmit}>
                         <label>
-                            Id:<input type="text" value={this.state.id} name="id" readOnly
-                                      onChange={event => this.setState({id: event.target.value})}/>
+                            Id:<InputText type="text" value={this.state.id} name="id" readOnly
+                                          onChange={(event:any) => this.setState({id: event.target.value})}
+
+                        />
                         </label>
                         <label>
-                            Name:<input type="text" value={this.state.name} name="name"
-                                        onChange={event => this.setState({name: event.target.value})}/>
+                            Name:<InputText type="text" value={this.state.name} name="name"
+                                            onChange={(event:any) => this.setState({name: event.target.value})}/>
                         </label>
                         <label>
-                            Display:<input type="text" value={this.state.display} name="display"
-                                           onChange={event => this.setState({display: event.target.value})}/>
+                            Display:<InputText type="text" value={this.state.display} name="display"
+                                               onChange={(event:any) => this.setState({display: event.target.value})}/>
                         </label>
 
-                        <button type="submit">Save</button>
+                        <Button type="submit" label="Save" icon="pi pi-check" className="p-button-success"/>
                     </form> :
                     <div></div>
                 }

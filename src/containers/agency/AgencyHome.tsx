@@ -3,6 +3,9 @@ import {AgencyList} from "./AgencyList";
 import axios from "axios";
 import {Agency} from "../../models/agency";
 import {AgencyForm} from "./AgencyForm";
+import {Button} from "primereact/button";
+import {Dialog} from "primereact/dialog";
+import {Messages} from "primereact/messages";
 
 interface Props {
 
@@ -12,17 +15,20 @@ interface State {
     agencies: []
     showForm: boolean;
     actionLabel: string;
+    actionIcon: string;
     activeAgency: Agency;
 }
 
 export class AgencyHome extends Component<Props, State> {
+    private messages: any;
 
     constructor(props: Readonly<Props>) {
         super(props);
         this.state = {
             agencies: [],
             showForm: false,
-            actionLabel: '+',
+            actionLabel: 'Add',
+            actionIcon: 'pi pi-plus',
             activeAgency: {
                 id: '00000000-0000-0000-0000-000000000000',
                 name: '',
@@ -35,6 +41,7 @@ export class AgencyHome extends Component<Props, State> {
         let res = await axios.get("http://localhost:3001/practices");
         let data = res.data;
         this.setState({agencies: data});
+        this.messages.clear();
     }
 
     componentDidMount() {
@@ -45,7 +52,13 @@ export class AgencyHome extends Component<Props, State> {
         event.preventDefault();
         this.setState({
             showForm: !this.state.showForm,
-            actionLabel: this.state.actionLabel === '+' ? 'X' : '+'
+            actionLabel: this.state.actionLabel === 'Add' ? 'Cancel' : 'Add',
+            actionIcon: this.state.actionLabel === 'Add' ? 'pi pi-times' : 'pi pi-plus',
+            activeAgency: {
+                id: '00000000-0000-0000-0000-000000000000',
+                name: '',
+                display: ''
+            }
         })
     }
 
@@ -63,11 +76,13 @@ export class AgencyHome extends Component<Props, State> {
         let savedAgency = res.data;
         console.log(`saved ${savedAgency}`);
 
+        this.messages.show({severity: 'success', summary: 'Saved successfully', detail: `${savedAgency.name} saved`});
+
         this.loadData();
 
         this.setState({
             showForm: false,
-            actionLabel: '+'
+            actionLabel: 'Add'
         })
     }
 
@@ -75,7 +90,8 @@ export class AgencyHome extends Component<Props, State> {
         console.log('editing... >', data);
         this.setState({
             showForm: true,
-            actionLabel: 'X',
+            actionLabel: 'Cancel',
+            actionIcon: 'pi pi-times',
             activeAgency: data
         })
     }
@@ -86,18 +102,27 @@ export class AgencyHome extends Component<Props, State> {
         this.loadData();
     }
 
+    onHide = () => {
+        this.setState({showForm: false});
+    }
 
     render() {
         return (
             <div>
-                Agency Home <button onClick={this.showForm}>{this.state.actionLabel}</button>
+                Agency Home <Button label={this.state.actionLabel} icon={this.state.actionIcon}
+                                    onClick={this.showForm}/>
+                <Messages ref={(el) => this.messages = el}></Messages>
                 <hr/>
-                {this.state.showForm ?
-                    <AgencyForm onFormSubmitted={this.saveAgency} agency={this.state.activeAgency}/> :
-                    <div></div>}
+
+
                 {this.state.agencies ?
                     <AgencyList agencies={this.state.agencies} onDelete={this.deleteAgency} onEdit={this.editAgency}/> :
-                    <div>xxx</div>}
+                    <div></div>}
+
+                <Dialog header="Agency" visible={this.state.showForm} style={{width: '50vw'}} onHide={this.onHide}
+                        maximizable>
+                    <AgencyForm onFormSubmitted={this.saveAgency} agency={this.state.activeAgency}/>
+                </Dialog>
             </div>);
     }
 }
