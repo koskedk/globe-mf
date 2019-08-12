@@ -7,6 +7,9 @@ import {AppRightPanel} from "../components/AppRightPanel";
 import {AppMenu} from "../components/AppMenu";
 import {ScrollPanel} from "primereact/scrollpanel";
 import {AppInlineProfile} from "../components/AppInlineProfile";
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {AgencyHome} from "./agency/AgencyHome";
+import {FacilityHome} from "./facility/FacilityHome";
 
 interface Props {
     menuClick?: boolean
@@ -204,38 +207,13 @@ export class App extends Component<Props, State> {
     createMenu = () => {
         this.menu = [
             {
-                label: 'Dashboard', icon: 'dashboard', command: () => {
-                    window.location.href = "#/"
+                label: 'Partners', icon: 'dashboard', command: () => {
+                    window.location.href = "/"
                 }
             },
             {
-                label: 'Menu Hierarchy', icon: 'menu',
-                items: [
-                    {
-                        label: 'Submenu 1', icon: 'subject',
-                        items: [
-                            {
-                                label: 'Submenu 1.1', icon: 'subject',
-                                items: [
-                                    {label: 'Submenu 1.1.1', icon: 'subject'},
-                                    {label: 'Submenu 1.1.2', icon: 'subject'},
-                                    {label: 'Submenu 1.1.3', icon: 'subject'},
-                                ]
-                            },
-                            {
-                                label: 'Submenu 1.2', icon: 'subject',
-                                items: [
-                                    {label: 'Submenu 1.2.1', icon: 'subject'},
-                                    {label: 'Submenu 1.2.2', icon: 'subject'}
-                                ]
-                            },
-                        ]
-                    }
-                ]
-            },
-            {
-                label: 'Utils', icon: 'build', command: () => {
-                    window.location.href = "#/utils"
+                label: 'Facilities', icon: 'build', command: () => {
+                    window.location.href = "/facility"
                 }
             },
         ];
@@ -281,8 +259,10 @@ export class App extends Component<Props, State> {
                         {/* <AppBreadCrumbWithRouter />      */}
 
                         <div className="layout-content">
-
-                            {/* <Route path="/" exact component={Dashboard} />
+                            <Router>
+                                <Route path="/" exact component={AgencyHome}/>
+                                <Route path="/facility" exact component={FacilityHome}/>
+                                {/*
                             <Route path="/forms" component={FormsDemo} />
                             <Route path="/sample" component={SampleDemo} />
                             <Route path="/data" component={DataDemo} />
@@ -296,7 +276,7 @@ export class App extends Component<Props, State> {
                             <Route path="/utils" component={UtilsDemo} />
                             <Route path="/documentation" component={Documentation} /> */}
 
-
+                            </Router>
                         </div>
                     </div>
 

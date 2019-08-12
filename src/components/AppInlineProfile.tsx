@@ -20,7 +20,7 @@ export class AppInlineProfile extends Component<Props, State> {
 
         this.style1 = {
             height: '0px',
-            'padding-top':'-5'
+            paddingTop:'.1em'
         }
     }
 
