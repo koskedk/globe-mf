@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import * as uuid from "uuid";
+import {Agency} from "../../models/agency";
 import {Button} from "primereact/button";
 import {InputText} from "primereact/inputtext";
 
@@ -13,7 +15,7 @@ interface State {
     display: string
 }
 
-export class AgencyForm extends Component<Props, State> {
+export class MechanismForm extends Component<Props, State> {
 
 
     componentDidMount(): void {

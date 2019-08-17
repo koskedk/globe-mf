@@ -1,11 +1,8 @@
 import React, {Component} from "react";
-import axios from 'axios';
-import {AgencyHome} from "./AgencyHome";
 import {Agency} from "../../models/agency";
 import {DataTable} from "primereact/datatable";
 import {Column} from "primereact/column";
 import {Button} from "primereact/button";
-import {Dialog} from "primereact/dialog";
 
 interface Props {
     agencies: Agency[]

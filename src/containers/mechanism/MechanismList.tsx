@@ -15,7 +15,7 @@ interface Props {
 interface State {
 }
 
-export class FacilityList extends Component<Props, State> {
+export class MechanismList extends Component<Props, State> {
 
     edit = (event: any, data: any) => {
         event.preventDefault();

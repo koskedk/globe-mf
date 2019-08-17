@@ -13,7 +13,7 @@ interface State {
     display: string
 }
 
-export class AgencyForm extends Component<Props, State> {
+export class FacilityForm extends Component<Props, State> {
 
 
     componentDidMount(): void {

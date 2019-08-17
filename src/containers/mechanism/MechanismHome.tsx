@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import {AgencyList} from "./AgencyList";
 import axios from "axios";
 import {Agency} from "../../models/agency";
-import {AgencyForm} from "./AgencyForm";
 import {Button} from "primereact/button";
 import {Dialog} from "primereact/dialog";
 import {Messages} from "primereact/messages";
+import { MechanismList } from "./MechanismList";
+import {MechanismForm} from "./MechanismForm";
 
 interface Props {
 
@@ -19,7 +19,7 @@ interface State {
     activeAgency: Agency;
 }
 
-export class AgencyHome extends Component<Props, State> {
+export class MechanismHome extends Component<Props, State> {
     private messages: any;
 
     constructor(props: Readonly<Props>) {
@@ -116,12 +116,12 @@ export class AgencyHome extends Component<Props, State> {
 
 
                 {this.state.agencies ?
-                    <AgencyList agencies={this.state.agencies} onDelete={this.deleteAgency} onEdit={this.editAgency}/> :
+                    <MechanismList agencies={this.state.agencies} onDelete={this.deleteAgency} onEdit={this.editAgency}/> :
                     <div></div>}
 
                 <Dialog header="Agency" visible={this.state.showForm} style={{width: '50vw'}} onHide={this.onHide}
                         maximizable>
-                    <AgencyForm onFormSubmitted={this.saveAgency} agency={this.state.activeAgency}/>
+                    <MechanismForm onFormSubmitted={this.saveAgency} agency={this.state.activeAgency}/>
                 </Dialog>
             </div>);
     }
